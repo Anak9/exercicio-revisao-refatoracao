@@ -4,25 +4,35 @@
 #include <iostream>
 #include <string>
 
-class Empregado {
-	
-  public:
-    double salarioHora;  
-    double quotaMensalVendas;  
+class Empregado
+{
 
+public:
 
-    double pagamentoMes(double horasTrabalhadas) {
- 
-      double t = horasTrabalhadas;
-	  
-	  //CÃ¡lculo de hora extra (+50% se horasTrabalhadas > 8)
-      if (horasTrabalhadas > 8) {
-        double x = horasTrabalhadas - 8;
-        t += x / 2;
-      }
-	  return t * salarioHora;
-    }
-	
+    /**
+     *Construtores e Destrutor
+     */
+    Empregado(){}
+    Empregado(std::string nome, double salario);
+    ~Empregado(){}
+
+    /**
+     * Essa função calcula o pagamento mensal do empregado considerando as horas extras
+     * O valor da hora extra é 50% maior do que o valor da hora normal
+     */
+    double pagamentoMes(double horasTrabalhadas);
+
+    /**
+     * Setters and Getters
+     */
+    void setNome(std::string nome);
+    std::string getNome();
+    void setSalarioHora(double salario);
+
+private:
+    std::string nome;
+    double salarioHora;
+    static int constexpr horasNormaisDiarias = 8;
 };
 
 #endif
