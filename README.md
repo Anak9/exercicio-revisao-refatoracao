@@ -1,9 +1,25 @@
 # Exercício Pull Request
 
-O objetivo desse problema é praticar a parte de revisão e refatoração.
- 
-Você deve criar uma cópia local desse repositório, fazer as alterações que julgar necessárias e então realizar um Pull Request. Você é livre para criar outros arquivos, classes, métodos, etc., desde que o main continue produzindo a mesma saída. Lembre-se que essa etapa não altera o comportamento funcional. 
- 
-No seu pull request faça uma lista/descrição detalhada das possíveis soluções que você utilizou.
-  
-Dica: Utilize o catálogo com sugestões de refatoração (https://refactoring.com/catalog/).
+- Criei os arquivos:
+ -Empregado.cpp
+ -Engenheiro.hpp
+ -Vendedor.hpp
+
+- Adicionei comentários sobre as funções que informam o que elas fazem
+
+- Tornei privados os atributos públicos
+
+- Movi o atributo 'nome' presente em Engenheiro e Vendedor para a classe Empregado
+
+- Criei métodos setters e getters
+
+- Criei Destrutores e Construtores para as classes
+
+- Passei a implementação do método 'double pagamentoMes(double horasTrabalhadas)' do arquivo Empregado.hpp
+  para o arquivo Empregado.cpp
+
+- Tirei o 'quotaMensalVendas' de Empregado e passei para a classe Vendedor
+
+- Criei o atributo 'static int constexpr horasNormaisDiarias = 8' no arquivo Empregado.hpp
+
+- Modifiquei o arquivo main de acordo com todas essas mudanças
